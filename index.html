@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7ff, #dfe9ff);
+            color: #1f2a44;
+        }
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        img {
+            width: 300px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 12px 24px rgba(31, 42, 68, 0.15);
+            border: 4px solid #ffffff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        img:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 28px rgba(31, 42, 68, 0.22);
+        }
+
+        #btn {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        button {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 999px;
+            background: #4f6ef7;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(79, 110, 247, 0.3);
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: #3958e6;
+            transform: translateY(-2px);
+        }
+    </style>    
+</head>
+<body>
+    <div>
+        <img id="imgsection01" src="assets/before1.jpg" width="400" >
+
+        <img id="imgsection02" src="assets/before2.jpg" width="400"  >
+    
+        <img id="imgsection03" src="assets/before3.jpg" width="400" >
+     
+    </div>
+    <div id="btn">
+        <button onclick="swapPic('imgsection01' , 'assets/after1.jpg ')">Swap</button>
+        <button onclick="swapPic('imgsection02' , 'assets/after2.jpg')">Swap</button>
+        <button onclick="swapPic('imgsection03' , 'assets/after3.jpg')">Swap</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
